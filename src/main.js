@@ -2,9 +2,16 @@
 
 //llamando el contenido de la DATA "rickandmorty.js"
 const data = window.RICKANDMORTY.results;
+//Definir funcion para pintar en el html
+data.forEach((element, index) => 
+console.log(`${index} 
+IMAGE: ${element.image} 
+NOMBRE: ${element.name} 
+DIMENSION: ${element.origin.name}`)
+);
+//imprimir en html
 
-data.forEach(Element
-  }
+
 
 
 
