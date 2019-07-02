@@ -2,7 +2,7 @@ body {
     background: url(./images-rm/rick_and_morty.jpg);
     margin: auto;
     width: 100%;
-    height: 100vh; /* VH es alto de la ventana. permite adaptacion en dispositivos*/
+    height: 100vh;  /*VH es alto de la ventana. permite adaptacion en dispositivos */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,4 +13,9 @@ body {
 
 h1, h2 {
     text-align: center;
+}
+
+#all-data {
+    align-items: center;
+
 }
