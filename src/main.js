@@ -12,27 +12,33 @@ const infoData = document.getElementById('info-data');
 let string = '';   // creando variable que contendra el string
 
 data.forEach((element, index) => {         // DESARROLLLO DE FUNCION
-// `${index} 
-// IMAGE: ${element.image} 
-// NOMBRE: ${element.name} 
-// DIMENSION: ${element.origin.name}`
-// console.log(element.image)
+  // console.log(`${index} 
+  // IMAGE: ${element.image} 
+  // NOMBRE: ${element.name} 
+  // DIMENSION: ${element.origin.name}`
+  // console.log(element.image)
 
-string += `<div class="prueba">
-<h3>${element.name} </h3>
-<p>${element.origin.name} </p>
-<img src="${element.image}"  alt="">
+  string += `<div class="contenido">
+ <div class= "tarjeta">
+    <div class="contenido-tarjeta"> 
+    <img src="${element.image}" alt="">
+      <h3>${element.name} </h3>
+        <p>${element.origin.name} </p>
+     </div>
+  </div>
 </div>`
 })
-console.log(string)
-infoData.innerHTML = string
+
+
+//console.log(string);
+infoData.innerHTML = string;
   
 
 
 
   /*
 ----------------------------------------------------------------
-3
+
 data.forEach((element, index) => 
 console.log(`${index} 
 IMAGE: ${element.image} 
@@ -41,7 +47,7 @@ DIMENSION: ${element.origin.name}`)
 );
 
 ----------------------------------------------------------------
- 2
+
   const data = window.RICKANDMORTY.results;
   data.forEach(imprimirData);
 
@@ -49,8 +55,7 @@ DIMENSION: ${element.origin.name}`)
   document.getElementById('info-data').innerHTML += element.name + "<br>" + element.location.name +"<br>";
   }
 
-
-  ----------------------------------------------------------------
+----------------------------------------------------------------
 const data = window.RICKANDMORTY.results
 data.forEach(imprimirData);
 function imprimirData(item, index) {
