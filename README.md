@@ -12,7 +12,7 @@ A continuación, describimos el método empleado para la obtención de los datos
 
    Muestra: La encuesta fue difundida a través de redes sociales ( Slack, WhatsApp, Facebook); obtuvimos una muestra aleatoria constituida por 46 sujetos. En la siguiente sección, mostramos las características de los sujetos encuestados:
 
-![](images-readme/seccion-1.png)
+![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-1.png)
 ![](images-readme/seccion-2.png)
 ![](images-readme/seccion-3.png)
 ![](images-readme/seccion-4.png)
