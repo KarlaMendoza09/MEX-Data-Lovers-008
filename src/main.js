@@ -19,6 +19,8 @@ const allData = data.forEach((element, index) => {
 });
 
 const personajes= () => {         //funcion boton
+  //agregar una clase para cambiar estilo al presionar el boton
+  
   infoData.innerHTML = stringAllData;
 };
 btnAllData.addEventListener('click',personajes);
