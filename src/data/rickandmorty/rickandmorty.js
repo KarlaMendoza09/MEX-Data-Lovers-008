@@ -63,7 +63,7 @@ window.RICKANDMORTY = {
     "url": "https://rickandmortyapi.com/api/character/3",
     "created": "2017-11-04T19:09:56.428Z"
   }, {
-    "id": 4,
+    "id": 4, //3
     "name": "Beth Smith",
     "status": "Alive",
     "species": "Human",

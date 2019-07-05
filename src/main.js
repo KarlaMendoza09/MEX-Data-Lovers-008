@@ -103,7 +103,7 @@ btnMortys.addEventListener('click',viewAllMortys);
 
 
 
-/* ------------BORRADORES-----------------------------------------------------------------------
+/* ------------BORRADORES del proceso de solucion hast el momento----------------------------------------------------------------------
 //hacer boton para que aparesca el filtrado
 const btnFiltro= document.getElementById('btn-filtro');
 //const data=window.RICKANDMORTY.results - esta ya esta definida en pa parte superior
