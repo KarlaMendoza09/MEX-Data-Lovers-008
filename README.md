@@ -40,7 +40,7 @@ CÓMO: Seguidora de la serie
 QUIERO : Web fan que me permita visualizar información relevante y ordenada de Rick y Morthy.
 PARA: Informarme de la trama, entender las teorías  y personajes. 
 
-![sketch op. 1](images-readme/sketch-uno.png)
+![sketch op. 1](./sketch-uno.png)
 ![sketch op. 2](images-readme/sketch-dos.png)
 
 
