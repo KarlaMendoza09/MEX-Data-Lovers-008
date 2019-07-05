@@ -13,10 +13,10 @@ A continuación, describimos el método empleado para la obtención de los datos
    Muestra: La encuesta fue difundida a través de redes sociales ( Slack, WhatsApp, Facebook); obtuvimos una muestra aleatoria constituida por 46 sujetos. En la siguiente sección, mostramos las características de los sujetos encuestados:
 
 ![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-1.png)
-![](images-readme/seccion-2.png)
-![](images-readme/seccion-3.png)
-![](images-readme/seccion-4.png)
-![](images-readme/seccion-5.png)
+![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-2.png)
+![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-3.png)
+![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-4.png)
+![](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/seccion-5.png)
 
    PROCESO DE DISEÑO
 
@@ -40,8 +40,8 @@ CÓMO: Seguidora de la serie
 QUIERO : Web fan que me permita visualizar información relevante y ordenada de Rick y Morthy.
 PARA: Informarme de la trama, entender las teorías  y personajes. 
 
-![sketch op. 1](./sketch-uno.png)
-![sketch op. 2](images-readme/sketch-dos.png)
+![sketch op. 1](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/sketch-uno.png)
+![sketch op. 2](https://github.com/silviatrinidad/MEX-Data-Lovers-008/blob/branch-trinity/images-%20readme/sketch-dos.png)
 
 
 
