@@ -12,11 +12,11 @@ A continuación, describimos el método empleado para la obtención de los datos
 
    Muestra: La encuesta fue difundida a través de redes sociales ( Slack, WhatsApp, Facebook); obtuvimos una muestra aleatoria constituida por 46 sujetos. En la siguiente sección, mostramos las características de los sujetos encuestados:
 
-![](./images-readme/seccion-1.png)
-![](./images-readme/seccion-2.png)
-![](./images-readme/seccion-3.png)
-![](./images-readme/seccion-4.png)
-![](./images-readme/seccion-5.png)
+![](images-readme/seccion-1.png)
+![](images-readme/seccion-2.png)
+![](images-readme/seccion-3.png)
+![](images-readme/seccion-4.png)
+![](images-readme/seccion-5.png)
 
    PROCESO DE DISEÑO
 
@@ -40,8 +40,8 @@ CÓMO: Seguidora de la serie
 QUIERO : Web fan que me permita visualizar información relevante y ordenada de Rick y Morthy.
 PARA: Informarme de la trama, entender las teorías  y personajes. 
 
-![](./images-readme/sketch-uno.png)
-![](./images-readme/sketch-dos.png)
+![sketch op. 1](images-readme/sketch-uno.png)
+![sketch op. 2](images-readme/sketch-dos.png)
 
 
 
