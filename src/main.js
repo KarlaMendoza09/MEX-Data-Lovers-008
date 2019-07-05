@@ -49,9 +49,59 @@ btnEarth.addEventListener('click',viewEarthC);
 
 
 
+//BOTON MOSTRAR RICKS
+const btnRicks= document.getElementById('btn-ricks');
+
+let stringAllRicks = '';
+const personRk = data.filter((rickSan) => { 
+  
+  if (rickSan.name === 'Rick Sanchez') {
+    stringAllRicks += `<div class="tarjeta"> 
+    <img src="${rickSan.image}" alt="">
+    <h3>${rickSan.name} </h3>
+    <p>DIMENSIÓN: ${rickSan.origin.name}</p>
+    <p>ESPECIE: ${rickSan.species}</p>
+</div>`
+   //console.log(stringAllRicks);
+  }
+});
+
+//funcion en el boton
+const viewAllRicks = () => {
+  infoData.innerHTML = stringAllRicks;
+};
+btnRicks.addEventListener('click',viewAllRicks);
 
 
-/* -----------------------------------------------------------------------------------
+
+
+//BOTON MOSTRAR MORTYS
+const btnMortys= document.getElementById('btn-mortys');
+
+let stringAllMortys = '';
+const personMt = data.filter((mortySm) => { 
+  
+  if (mortySm.name === 'Morty Smith') {
+    stringAllMortys += `<div class="tarjeta"> 
+    <img src="${mortySm.image}" alt="">
+    <h3>${mortySm.name} </h3>
+    <p>DIMENSIÓN: ${mortySm.origin.name}</p>
+    <p>ESPECIE: ${mortySm.species}</p>
+</div>`
+   //console.log(stringAllMortys);
+  }
+});
+
+//funcion en el boton
+const viewAllMortys = () => {
+  infoData.innerHTML = stringAllMortys;
+};
+btnMortys.addEventListener('click',viewAllMortys);
+
+
+
+
+/* ------------BORRADORES-----------------------------------------------------------------------
 //hacer boton para que aparesca el filtrado
 const btnFiltro= document.getElementById('btn-filtro');
 //const data=window.RICKANDMORTY.results - esta ya esta definida en pa parte superior
