@@ -30,7 +30,7 @@ HISTORIA DE USUARIO
 
 Entrevista 1
 
-“Mi nombre es Lizbeth, tengo 22 años, soy estudiante. Me gusta la serie de Rick y Morthy, y me considero espectadora promedio.
+“Mi nombre es Liz, tengo 22 años, soy estudiante. Me gusta la serie de Rick y Morthy, y me considero espectadora promedio.
 Lo que me llamas la atención es  el desarrollo de los personajes y las dimensiones alternas. En algún momento busqué su página oficial pero solo aparecieron resultados de pequeños  foros al respecto. Me gustaría encontrar una página web donde pueda saber un poco más de las dimensiones y los personajes.
 Es importante una  web de la serie donde toque algunos temas de algunos episodios, ya que a veces, son muy científicos y no todos conocemos esas teorías;  estaría padre un sitio que te ofrezca información al respecto.
 
