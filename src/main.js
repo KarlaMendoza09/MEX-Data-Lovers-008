@@ -1,35 +1,101 @@
-/*FUNCION MOSTRAR DATA EN HTML */
+//llamando el contenido de la DATA "rickandmorty.js"
+const data = window.RICKANDMORTY.results;     
 
-const data = window.RICKANDMORTY.results;     //llamando el contenido de la DATA "rickandmorty.js"
 const infoData = document.getElementById('info-data');     //llamando el div donde vamos a imprimir la data
 
-let string = '';     // creando variable que contendra el string
+//BOTON MOSTRAR TODOS LOS PERSONAJES
+const btnAllData= document.getElementById('btn-allData');
 
-data.forEach((element, index) => { // desarrollo de la funcion
-  string += `<div class="tarjeta">     
- <div class= "retrato">
-    <div class="texto"> 
-    <h3>${element.name} </h3>
+let stringAllData = '';     // creando variable que guardara toda la data (string)
+const allData = data.forEach((element, index) => {
+  stringAllData += `<div class="tarjeta"> 
     <img src="${element.image}" alt="">
-    
-     </div>
-  </div>
+    <h3>${element.name} </h3>
+    <p>DIMENSIÓN: ${element.origin.name}</p>
+    <p>ESPECIE: ${element.species}</p>
+    <p>GÉNERO: ${element.gender}</p>
 </div>`
+//console.log(stringAllData);
 });
-//console.log(string);
-infoData.innerHTML = string;
 
-/* FILTRAR INFO */
+const personajes= () => {         //funcion boton
+  infoData.innerHTML = stringAllData;
+};
+btnAllData.addEventListener('click',personajes);
+
+
+//BOTON MOSTRAR DIMENSION EARTH C137
+const btnEarth= document.getElementById('btn-earth');
+
+let stringAllEarthC = '';
+const sistems = data.filter((planets) => { 
+  
+  if (planets.origin.name === 'Earth (C-137)') {
+    stringAllEarthC += `<div class="tarjeta"> 
+    <img src="${planets.image}" alt="">
+    <h3>${planets.name} </h3>
+    <p>ESPECIE: ${planets.species}</p>
+    <p>GÉNERO: ${planets.gender}</p>
+</div>`
+   //console.log(stringAllPlanets);
+  }
+});
+
+//funcion en el boton
+const viewEarthC = () => {
+  infoData.innerHTML = stringAllEarthC;
+};
+btnEarth.addEventListener('click',viewEarthC);
+
+
+
+
+
+/* -----------------------------------------------------------------------------------
 //hacer boton para que aparesca el filtrado
 const btnFiltro= document.getElementById('btn-filtro');
+//const data=window.RICKANDMORTY.results - esta ya esta definida en pa parte superior
 
-const primer = data.filter(dats => (dats.name === 'Abradolf Lincler'));
-console.log(primer);
-
-/*infoData.innerHTML=btnFiltro.addEventListener ('click', primer); */
+let stringAllPlanets = '';
+const sistems = data.filter(planets => (planets.location.name === 'Earth (C-137)'));
+//console.log(sistems);
+//funcion en el boton
+const viewAll = () => {
+  stringAllPlanets = `<div class="tarjeta">${sistems}</div>`
   
+};
+infoData.innerHTML = stringAllPlanets;
+btnFiltro.addEventListener('click',viewAll);
+----------------------------------------------------------------------------------------
 
+let stringAllPlanet= '';
+data.filter((planet) => (planet.location.name == 'Rick Sanchez'));
+console.log(VewSistem);
+//haciendo funcion para la accion del boton
+const imprimirFiltro = () =>{
+  stringAllPlanet += `<div class="tarjeta">     
+  <div class= "retrato">
+     <div class="texto"> 
+     <h3>${vewSistem.name} </h3>
+     <h4>${vewSistem.location.name} </h4>
+     <img src="${vewSistem.image}" alt="">
+     
+      </div>
+   </div>
+ </div>` 
+  
+  
+}
+//infoData.innerHTML = stringAllPlanet;
+btnFiltro.addEventListener('click',imprimirFiltro);
 
+*/
+/*-----------------------------------------------------------------
+primer = data.filter(dats => (dats.name === 'Abradolf Lincler'));
+console.log(primer); */
+
+/*infoData.innerHTML=btnFiltro.addEventListener ('click', primer);   indexOF */
+  
 /*
 ----------------------------------------------------------------
 
