@@ -58,16 +58,6 @@ body {
     padding: 0;
     color: white;
 }
-.iniciales-image {
-    background: url(./images-rm/iniciales.png);
-    margin: auto;
-    width: 50%;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 
 /* PRESENTACION DEl SITIO */
 .presentacion {
