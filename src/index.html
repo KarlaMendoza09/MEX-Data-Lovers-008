@@ -5,13 +5,48 @@
     <title>RickandMorty</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
 
-<h1>Rick and Morty</h1>
-<h2>Web Fan</h2>
+  <script src="./data/rickandmorty/rickandmorty.js"></script>
+
+  <body> <!--<div id="root"></div> -->
+
+     <!-- HEADER BARRA SUPERIOR alineado izquierdo-->
+  <header class="header">
+      <div class="top-logo">
+        <ul>
+          <li><a href="#" target="_blank"> logo </a></li>
+        </ul>
+      </div>
+      <!-- centro-->
+      <div class="top-info">
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank">Todo sobre tus personajes, las dimensiones y ¡mucho más!</a></li>
+        </ul>
+      </div>
+       <!-- derecha-->
+      <div class="top-question">
+          <ul>
+            <li><a href="#" target="">¿ ?</a></li>
+          </ul>
+        </div>
+    </header>
+
+
+    <!-- BOTONES DE LA DATA-->
+<main class= "fondo-rm">
+<section class="botones">
+<button id="btn-allData"> TODOS LOS PERSONAJES </button>
+<button id="btn-earth"> E A R T H (C-137) </button>
+<button id="btn-ricks">  R I C K S </button>
+<button id="btn-mortys">  M O R T Y S </button>
+</section>
+<section class="ocultar" id="info-data"></section>
+</main>
+
+
+
+
     
-    <script src="./data/rickandmorty/rickandmorty.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
