@@ -1,7 +1,8 @@
 //llamando el contenido de la DATA "rickandmorty.js"
 const data = window.RICKANDMORTY.results;     
+//llamando el div donde vamos a imprimir la data
+const infoData = document.getElementById('info-data');     
 
-const infoData = document.getElementById('info-data');     //llamando el div donde vamos a imprimir la data
 
 //BOTON MOSTRAR TODOS LOS PERSONAJES
 const btnAllData= document.getElementById('btn-allData');
@@ -17,13 +18,145 @@ const allData = data.forEach((element, index) => {
 </div>`
 //console.log(stringAllData);
 });
-
-const personajes= () => {         //funcion boton
-  //agregar una clase para cambiar estilo al presionar el boton
-  
+const personajes= () => {      //funcion boton //agregar una clase para cambiar estilo al presionar el boton 
   infoData.innerHTML = stringAllData;
 };
 btnAllData.addEventListener('click',personajes);
+
+
+//ORDENAR DATA DE LA A-Z / Z-A
+
+/* Llamar el boton de selccion de HTML 
+y acceder a las opciones
+
+<select name="order" id="btn-order">
+  <option value="order">Ordenar</option>
+  <option value="a-z">de la A a la Z</option>
+  <option value="z-a">de la Z a la A</option>
+</select>
+*/
+//const btnOrder= document.getElementById('btn-order');
+let orderAllData= '';
+const orderData= data.sort(function (a, b) {
+  if (a.name > b.name) {
+    return orderAllData += `<div class="tarjeta"> 
+    <img src="${orderAllData.image}" alt="">
+    </div>`
+  } if (a.name < b.name) {
+    return orderAllData -1;
+  }
+  return 0;
+});
+infoData.innerHTML= orderAllData;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//BOTON MOSTRAR DIMENSION EARTH C137
+const btnEarth= document.getElementById('btn-earth');
+
+let stringAllEarthC = '';
+const sistems = data.filter((planets) => { 
+  
+  if (planets.origin.name === 'Earth (C-137)') {
+    stringAllEarthC += `<div class="tarjeta"> 
+    <img src="${planets.image}" alt="">
+    <h3>${planets.name} </h3>
+    <p>ESPECIE: ${planets.species}</p>
+    <p>GÉNERO: ${planets.gender}</p>
+</div>`
+   //console.log(stringAllPlanets);
+  }
+});
+//funcion en el boton
+const viewEarthC = () => {
+  infoData.innerHTML = stringAllEarthC;
+};
+btnEarth.addEventListener('click',viewEarthC);
+
+
+
+//BOTON MOSTRAR RICKS
+const btnRicks= document.getElementById('btn-ricks');
+let stringAllRicks = '';
+
+const personRk = data.filter((rickSan) => {  
+  if (rickSan.name === 'Rick Sanchez') {
+    stringAllRicks += `<div class="tarjeta"> 
+    <img src="${rickSan.image}" alt="">
+    <h3>${rickSan.name} </h3>
+    <p>DIMENSIÓN: ${rickSan.origin.name}</p>
+    <p>ESPECIE: ${rickSan.species}</p>
+</div>`
+   //console.log(stringAllRicks);
+  }
+});
+//funcion en el boton
+const viewAllRicks = () => {
+  infoData.innerHTML = stringAllRicks;
+};
+btnRicks.addEventListener('click',viewAllRicks);
+
+
+
+//BOTON MOSTRAR MORTYS
+const btnMortys= document.getElementById('btn-mortys');
+let stringAllMortys = '';
+
+const personMt = data.filter((mortySm) => { 
+  if (mortySm.name === 'Morty Smith') {
+    stringAllMortys += `<div class="tarjeta"> 
+    <img src="${mortySm.image}" alt="">
+    <h3>${mortySm.name} </h3>
+    <p>DIMENSIÓN: ${mortySm.origin.name}</p>
+    <p>ESPECIE: ${mortySm.species}</p>
+</div>`
+   //console.log(stringAllMortys);
+  }
+});
+
+//funcion en el boton
+const viewAllMortys = () => {
+  infoData.innerHTML = stringAllMortys;
+};
+btnMortys.addEventListener('click',viewAllMortys);
+
+
+
+
+
+
+/* ------------BORRADORES-----------------------------------------------------------------
+
+//llamar a la data y ordernarla
+const orderData= data.sort(function (a, b) {
+  if (a.name < b.name) {
+    return 1;
+  } if (a.name > b.name) {
+    return -1;
+  }
+  return 0;
+});
+console.log(orderData);
+
+
+--------------------------------------------------------------
 
 
 //BOTON MOSTRAR DIMENSION EARTH C137
@@ -49,61 +182,8 @@ const viewEarthC = () => {
 };
 btnEarth.addEventListener('click',viewEarthC);
 
+-----------------------------------------------------------------------------------------
 
-
-//BOTON MOSTRAR RICKS
-const btnRicks= document.getElementById('btn-ricks');
-
-let stringAllRicks = '';
-const personRk = data.filter((rickSan) => { 
-  
-  if (rickSan.name === 'Rick Sanchez') {
-    stringAllRicks += `<div class="tarjeta"> 
-    <img src="${rickSan.image}" alt="">
-    <h3>${rickSan.name} </h3>
-    <p>DIMENSIÓN: ${rickSan.origin.name}</p>
-    <p>ESPECIE: ${rickSan.species}</p>
-</div>`
-   //console.log(stringAllRicks);
-  }
-});
-
-//funcion en el boton
-const viewAllRicks = () => {
-  infoData.innerHTML = stringAllRicks;
-};
-btnRicks.addEventListener('click',viewAllRicks);
-
-
-
-
-//BOTON MOSTRAR MORTYS
-const btnMortys= document.getElementById('btn-mortys');
-
-let stringAllMortys = '';
-const personMt = data.filter((mortySm) => { 
-  
-  if (mortySm.name === 'Morty Smith') {
-    stringAllMortys += `<div class="tarjeta"> 
-    <img src="${mortySm.image}" alt="">
-    <h3>${mortySm.name} </h3>
-    <p>DIMENSIÓN: ${mortySm.origin.name}</p>
-    <p>ESPECIE: ${mortySm.species}</p>
-</div>`
-   //console.log(stringAllMortys);
-  }
-});
-
-//funcion en el boton
-const viewAllMortys = () => {
-  infoData.innerHTML = stringAllMortys;
-};
-btnMortys.addEventListener('click',viewAllMortys);
-
-
-
-
-/* ------------BORRADORES del proceso de solucion hast el momento----------------------------------------------------------------------
 //hacer boton para que aparesca el filtrado
 const btnFiltro= document.getElementById('btn-filtro');
 //const data=window.RICKANDMORTY.results - esta ya esta definida en pa parte superior
@@ -118,6 +198,7 @@ const viewAll = () => {
 };
 infoData.innerHTML = stringAllPlanets;
 btnFiltro.addEventListener('click',viewAll);
+
 ----------------------------------------------------------------------------------------
 
 let stringAllPlanet= '';
@@ -141,17 +222,14 @@ const imprimirFiltro = () =>{
 //infoData.innerHTML = stringAllPlanet;
 btnFiltro.addEventListener('click',imprimirFiltro);
 
-*/
-/*-----------------------------------------------------------------
-primer = data.filter(dats => (dats.name === 'Abradolf Lincler'));
-console.log(primer); */
-
-/*infoData.innerHTML=btnFiltro.addEventListener ('click', primer);   indexOF */
-  
-/*
 ----------------------------------------------------------------
 
-<p>${element.location.name} </p>
+primer = data.filter(dats => (dats.name === 'Abradolf Lincler'));
+console.log(primer);
+
+infoData.innerHTML=btnFiltro.addEventListener ('click', primer)
+
+----------------------------------------------------------------
 
 data.forEach((element, index) => 
 console.log(`${index} 
@@ -177,4 +255,5 @@ document.getElementById("info-data").innerHTML += index+ ' ' + item + "<br>";
 document.write(index + element.name+"<br>"); 
 document.write(index + element.location.name +"<br>");
 }
+---------------------------------------------------------------
 */
