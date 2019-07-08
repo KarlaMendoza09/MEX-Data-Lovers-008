@@ -47,7 +47,7 @@ body {
 
 /* INTRODUCCION */
 .fondo-rm {
-    background: url(./images-rm/RandM-dos.jpg);
+    background: url(./images-rm/rick-morty-dimension.jpg);
     margin: auto;
     width: 100%;
     height: 100vh;
@@ -60,7 +60,7 @@ body {
 }
 
 /* PRESENTACION DEl SITIO */
-.presentacion {
+.section-botones {
     background-color: #b93df3;
     margin: auto;
     width: 100%;
@@ -75,8 +75,12 @@ body {
 
 
 /* PRESENTACION DE LA DATA */
+
+.section-data {
+    background-color: #666;
+}
 #info-data {
-    /*background-color: #ff9102;*/
+    background-color: #ff9102;
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-around;

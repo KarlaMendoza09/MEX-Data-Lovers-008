@@ -25,6 +25,16 @@ btnAllData.addEventListener('click',personajes);
 
 
 //ORDENAR DATA DE LA A-Z / Z-A
+/*const orderData= data.sort(function (a, b) {
+  if (a.name < b.name) {
+    return 1;
+  } if (a.name > b.name) {
+    return -1;
+  }
+  return 0;
+});
+console.log(orderData);
+*/
 
 /* Llamar el boton de selccion de HTML 
 y acceder a las opciones
@@ -39,14 +49,12 @@ y acceder a las opciones
 let orderAllData= '';
 const orderData= data.sort(function (a, b) {
   if (a.name > b.name) {
-    return orderAllData += `<div class="tarjeta"> 
-    <img src="${orderAllData.image}" alt="">
-    </div>`
+    return orderAllData; 
   } if (a.name < b.name) {
     return orderAllData -1;
   }
   return 0;
-});
+}); console.log(orderAllData);
 infoData.innerHTML= orderAllData;
 
 
