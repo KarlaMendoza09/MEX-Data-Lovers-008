@@ -17,93 +17,7 @@ const allData = data.forEach((element, index) => {
 </div>`
 //console.log(stringAllData);
 });
-btnAllData.addEventListener('click', ()=> {infoData.innerHTML= stringAllData });
-
-
-//ORDENAR DATA DE LA A-Z / Z-A
-/*let newOrderData= '';
-const ordersData= data;
-const pruebaRm = ordersData.map(function(order) {
-  newOrderData +=`<div class="tarjeta"> 
-    <img src="${order.image}" alt="">
-    <h3>${order.name} </h3>
-</div>`
-  
-})
-//console.log(pruebaRm);
-infoData.innerHTML = newOrderData;*/
-
-/*let newFilterData=[];
-for ( let i= 0; i < data.length; i++) {
-  if (data[i].name === 'Rick Sanchez') {
-  newFilterData.push(data[i].species);
-}
-} */
-/*filter
- const newFilterData= data.filter (function (pruebaRm) {
-   return pruebaRm.name === 'Rick Sanchez';
- })
- .sort(function(RyM) {
-   return RyM.image;
- })
-
-console.log(newFilterData);
-*/
-
-
-/* -----------ORDENAR A-Z ---------------------------------
-
-const selectElement = document.getElementById('btn-order');
-
-selectElement.addEventListener('change', (event) => {
-
-const result = document.getElementById('info-data');
-  result.textContent = `Esto es contenido de data ${event.target.value}`;
-
-});
-
-------------------------------------------------------------
-const btnOrder= document.getElementById('btn-order').Value;
-
-//llamar a la data y ordernarla
-const orderData= data.sort(function (elementA, elementB) {
-  if (elementA.name > elementB.name) {
-    return 1;
-  } if (elementA.name < elementB.name) {
-    return -1;
-  }
-  return 0;
-});
-console.log(orderData);
-infoData.innerHTML= orderData;
-
-
-
- Llamar el boton de selccion de HTML 
-y acceder a las opciones
-
-function ShowSelected() {
-  //para obtener el valor
-  const cod= document.getElementById('btn-order').value;
-  alert("order");
-  //para obtener el texto
-  const combo= document.getElementById('btn-order');
-  const selected= combo.options[combo.selectedIndex].text;
-  alert(selected);
-}
-
-const btnOrder= document.getElementById('btn-order');
-let orderAllData= '';
-const orderData= data.sort(function (a, b) {
-  if (a.name > b.name) {
-    return orderAllData ++;
-  } if (a.name < b.name) {
-    return orderAllData -1;
-  }
-  return 0;
-});
--------------------------------------------------------- */
-
+btnAllData.addEventListener('click', ()=> {infoData.innerHTML= stringAllData })
 
 
 const btnEarth= document.getElementById('btn-earth');  //BOTON MOSTRAR DIMENSION EARTH C137
@@ -120,7 +34,7 @@ const sistems = data.filter((planets) => {
    //console.log(stringAllPlanets);
   }
 });
-btnEarth.addEventListener('click', () => {infoData.innerHTML = stringAllEarthC});
+btnEarth.addEventListener('click', () => {infoData.innerHTML = stringAllEarthC})
 
 
 
@@ -139,7 +53,7 @@ const personRk = data.filter((rickSan) => {
    //console.log(stringAllRicks);
   }
 });
-btnRicks.addEventListener('click', () => {infoData.innerHTML = stringAllRicks });
+btnRicks.addEventListener('click', () => {infoData.innerHTML = stringAllRicks })
 
 
 
@@ -158,4 +72,4 @@ const personMt = data.filter((mortySm) => {
    //console.log(stringAllMortys);
   }
 });
-btnMortys.addEventListener('click',() => {infoData.innerHTML = stringAllMortys });
+btnMortys.addEventListener('click',() => {infoData.innerHTML = stringAllMortys })
