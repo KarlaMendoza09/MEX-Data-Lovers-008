@@ -5,7 +5,7 @@
   return 'example';
 };
 
-window.example = example; */
+window.example = example;*/
 window.RICKANDMORTY.results = {
 // FUNCION QUE ORDENA
 orderBy: (selectedSort, data) => {
@@ -33,4 +33,3 @@ orderBy: (selectedSort, data) => {
 }
 
 };
-/// limpiando codigo...
