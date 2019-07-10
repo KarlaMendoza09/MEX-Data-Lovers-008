@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>RickandMorty</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <script src="./data/rickandmorty/rickandmorty.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>RickandMorty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body> 
+<script src="./data/rickandmorty/rickandmorty.js"></script>
 
-<div id="gradient"></div>
-<div id="card">
-  <h2>TODOS LOS PERSONAJES</h2>
-  <p>Sitio donde puedes ver información de los personajes</p>
-</div>
+<body>
 
+  <!--ENCABEZADO: BOTONES PRINCIPALES-->
+
+  <header class="header">
+    <div id="gradient"></div>
+    <div id="card">
+      <h2>RICK Y MORTY <br> Web F@n </h2>
+      <p>Elige lo quieres visualizar</p>
+    </div>
 <br>
-<!--SECCION VER DATA-->
-<section class= "section-data">
-  <div class="view-colecction" id="view-colecction"></div>
-</section>
+    <!--BOTONES-->
+    <div class="colecction-buttons">
+          <button id="btn-earth" class=""> E A R T H (C-137) </button>
+          <button id="btn-ricks"> R I C K S </button>
+          <button id="btn-mortys"> M O R T Y S </button>
+        </div>
+  </header>
+
+  <!--SECCION VER DATA-->
+  <section class="section-data">
+
+    <div class="view-colecction" id="view-colecction"></div>
+
+  </section>
 
 
-    
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+  <!-- <div class="desplegable">
+    <select id="btn-multi">
+      <option value="0" selected> Ordenar por ... </option>
+      <option value="1"> a - z </option>
+      <option value="2"> z - a </option>
+    </select>
+  </div> -->
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
