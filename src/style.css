@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 	padding: 0;
 	font-family: Helvetica, Arial, sans-serif;
-	color: #E9E2D0;
+	color: #ffffff;
 	background: #222; 
 	font-size: 1em;
 	line-height: 1.5em;
@@ -34,16 +34,16 @@ body {
 /* PRESENTACION DE LA DATA */
 
 .section-data {
-    background-color: #0c3d81;
+    background-color: #7c338f;
     padding: 1em;
     margin: 1em;
 }
 #view-colecction {
-    background-color: #80490b;
+    background-color: #140836;
     flex-direction: row;
     flex-wrap: wrap;   /*Los elementos flex son colocados en varias líneas*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
     border-radius: 2rem;
     width: 1200px;
@@ -54,24 +54,21 @@ body {
 }
 
 .individualcard {
-    background-color: #e7dada;
-    padding: 0;
+    background-color: #000000;
+    padding: 1rem;
     border-radius: 0.5rem;
-
+    width: 10em;
+height: 10rem;
 }
 
-.info {
-    background-color: #DAB040;
-    display: flex;
-}
 .portrait img {
-    width: 50px;
+    width: 150px;
     float: left;
     border-radius: 2rem;
     margin-right: 2rem;
-    -webkit-filter: drop-shadow(5px 5px 5px #807a0b);
-    -moz-filter: drop-shadow(5px 5px 5px #807a0b);
-    filter: drop-shadow(5px 5px 5px #80490b);
+    -webkit-filter: drop-shadow(10px 10px 10px #bebebd);
+    -moz-filter: drop-shadow(10px 10px 10px #bebebd);
+    filter: drop-shadow(10px 10px 10px #bebebd);
   }
 
 
@@ -87,10 +84,10 @@ body {
 /* ejemplo de tarjeta */
 #gradient {
     background: #999955;
-    background-image: linear-gradient(#DAB040 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 00%, #901A39 00%, #901A39 80%, #00535 80%);
+    background-image: linear-gradient(#DAB040 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 00%, #901A39 00%, #901A39 80%, #001035 80%);
     margin: 0 auto;
-    margin-top: 50px;
-    width: 50%;
+    margin-top: 100px;
+    width: 100%;
     height: 150px;
   }
   
@@ -107,7 +104,7 @@ body {
     top: 07.5px;
     margin-left: -250px;
     background: #E9E2D0;
-    box-shadow: -5px 0 35px -25px black, 5px 0 35px -25px black;
+    box-shadow: -10px 0 35px -25px black, 10px 0 35px -25px black;
     z-index: 5;
   }
  #card h2 {
