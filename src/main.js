@@ -25,14 +25,12 @@ let stringAllCards = ''; // creando variable que guardara toda la data (string)
 viewAllColecction.innerHTML= stringAllCards;
 
 //Ordenando data por medio de un select
-document.getElementById('btn-multiOption').addEventListener('click', () => { 
-  const indexSort= document.getElementById('btn-multiOption');
-  const selectedSort= indexSort[indexSort.selectedIndex].value;
-  const arraySort= data.sortBy(selectedSort, data);
-
-  colecctionCards(arraySort);
+const btn= document.getElementById('btn-multi').addEventListener('click', () => { 
+  const indexSort= document.getElementById('btn-multi');
+  const selectedSort= indexSort.selectedIndex.value;
+  const arraySort= AllCards.sortBy(selectedSort, data);
 });
-
+stringAllCards(arraySort);
 
 
 
