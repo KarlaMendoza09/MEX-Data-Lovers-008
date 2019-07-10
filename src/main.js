@@ -1,10 +1,14 @@
 
 const data = window.RICKANDMORTY.results;  //llamando el contenido de la DATA "rickandmorty.js"   
-const viewData = document.getElementById('view-data');  //llamando el div donde vamos a imprimir la data   
+const viewAllData = document.getElementById('view-data');  //llamando el div donde vamos a imprimir la data   
+
+//CREAR FUNCION QUE DEFINE LA VISUALIZACION DE LA DATA: "NOMBRE, TIPO, DIMENSION, ETC"
 
 
-let stringAllData = '';     // creando variable que guardara toda la data (string)
-const allData = data.forEach((element, index) => {
+/* let stringAllData = '';     - creando variable que guardara toda la data (string)
+
+
+const allData = data.forEach((element, index) => { //forEach ejecuta la función indicada una vez por cada elemento
   stringAllData += `<div class="tarjeta"> 
     <img src="${element.image}" alt="">
     <h3>${element.name} </h3>
@@ -14,24 +18,6 @@ const allData = data.forEach((element, index) => {
     <p>STATUS: ${element.status}</p>
 </div>`
 });
-viewData.innerHTML= stringAllData;
+//viewData.innerHTML= stringAllData;
 
-
-
-
-
-// ---------- ordenando de a la z y viceversa ----------
-
-
-
-
-const newArrayOrder='';
-document.getElementById('interactiveSelecter').addEventListener('click', () => {
-  const indexOrder= document.getElementById('interactiveSelecter'); //obtenemos text
-
-  const selectedOrder= indexOrder[indexOrder.selectedIndex].value; // obtenemos valor
-  
-  const newArrayOrder= window.RICKANDMORTY.orderBy(selectedOrder, Allata);
-  
-});
-console.log(newArrayOrder);
+*/

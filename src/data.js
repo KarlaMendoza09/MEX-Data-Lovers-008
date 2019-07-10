@@ -6,7 +6,7 @@
 };
 
 window.example = example;*/
-window.RICKANDMORTY.results = {
+/*window.RICKANDMORTY.results = {
 // FUNCION QUE ORDENA
 orderBy: (selectedSort, data) => {
   if (SelectedSort === 2) {
@@ -33,3 +33,4 @@ orderBy: (selectedSort, data) => {
 }
 
 };
+*/
