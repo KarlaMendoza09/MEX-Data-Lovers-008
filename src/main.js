@@ -4,10 +4,15 @@ const viewAllData = document.getElementById('view-data');  //llamando el div don
 
 //CREAR FUNCION QUE DEFINE LA VISUALIZACION DE LA DATA: "NOMBRE, TIPO, DIMENSION, ETC"
 
+const colecctionCards = (element) => {
+
+}
+
+
+
+
 
 /* let stringAllData = '';     - creando variable que guardara toda la data (string)
-
-
 const allData = data.forEach((element, index) => { //forEach ejecuta la función indicada una vez por cada elemento
   stringAllData += `<div class="tarjeta"> 
     <img src="${element.image}" alt="">
@@ -19,5 +24,5 @@ const allData = data.forEach((element, index) => { //forEach ejecuta la función
 </div>`
 });
 //viewData.innerHTML= stringAllData;
-
+stringAllData();
 */
