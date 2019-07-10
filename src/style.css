@@ -5,7 +5,7 @@
  */
 
 /* GENERALES*/
-/*
+
 html {
   box-sizing: border-box;
 }
@@ -15,7 +15,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-*/
+
 
 body {
   margin: 0;
@@ -28,11 +28,11 @@ body {
 	line-height: 1em;
 } 
 
-/*.left { left:25px;}
+.left { left:25px;}
   .right { right: 25px;}
   .center { text-align: center; }
   .bottom { position: absolute; bottom: 25px; }
-*/
+
   /* ENCABEZADO DE COLORES */
   #gradient {
       background: #999955;
@@ -77,7 +77,22 @@ body {
       line-height: 100%;
     }
 
-    .colecction-buttons button {
+    #colecction-buttons {
+      border-radius: 50px 50%;
+      -webkit-border-radius: 50px 50% 50px 0% ;
+      -moz-border-radius: 50px 50% 50px 0%;
+      padding: 6px 16px;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+	    text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+      color: white;
+      background: linear-gradient(top bottom, #ecb51c 0%,#754703 100%);
+	    background: -moz-linear-gradient(top bottom, #ecb51c 0%, #754703 100%); 
+      background: linear-gradient(to bottom, #ecb51c 0%,#754703 100%);
+      font-size: 1.1rem;
+      font-weight: bold; /* Letra en negrita */
+    }
+
+    #colecction-buttons button {
       cursor: pointer; /* Para que el cursor del ratón cambie */
       border-radius: 50px 50% 0px 0%;
       -webkit-border-radius: 50px 50% 0px 0% ;
@@ -91,10 +106,8 @@ body {
       background: linear-gradient(to bottom, #db3e29 0%,#c40c05 100%);
       font-size: 1.1rem;
       font-weight: bold; /* Letra en negrita */
-      margin-left: auto;
-      margin-right: auto;
     }
-
+    
     #btn-multi { /*boton select a-z /z-a*/
       cursor: pointer; /* Para que el cursor del ratón cambie */
       border-radius: 15px 60% 0px 0%;
@@ -109,18 +122,12 @@ body {
       background: linear-gradient(to bottom, #db3e29 0%,#c40c05 100%);
       font-size: 1rem;
       font-weight: bold; /* Letra en negrita */
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
+      
       
     }
     
 /* PRESENTACION DE LA DATA */
-
-.header {
-    background-color: #7c338f;
-    padding: 1em;
-    margin: 1em;
-}
 #view-colecction {
     background-color: #440e70;
     flex-direction: row;
@@ -139,7 +146,7 @@ body {
     background-color: #000000;
     border-radius: 0.8rem;
     width: 30em;
-    height: 16rem;
+    height: 14rem;
     display: inline-block;
     padding: 0.8em;
     margin: 0.5em;
