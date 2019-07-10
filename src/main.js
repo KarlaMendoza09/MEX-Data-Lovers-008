@@ -24,6 +24,32 @@ let stringAllCards = ''; // creando variable que guardara toda la data (string)
 });
 viewAllColecction.innerHTML= stringAllCards;
 
+//Ordenando data por medio de un select
+document.getElementById('btn-multiOption').addEventListener('click', () => { 
+  const indexSort= document.getElementById('btn-multiOption');
+  const selectedSort= indexSort[indexSort.selectedIndex].value;
+  const arraySort= data.sortBy(selectedSort, data);
+
+  colecctionCards(arraySort);
+});
+
+
+
+
+/*const btnMultiOption = document. getElementById('btn-multioption');
+
+dataFiltrada= () =>{
+  const indexSort = btnMultiOption;
+  const selectedSort = indexSort[indexSort.selectedIndex].value;
+  const newDataFiltrada = data.sort(selectedSort, data) => {
+
+  }
+} */
+
+
+
+
+
 
 
 

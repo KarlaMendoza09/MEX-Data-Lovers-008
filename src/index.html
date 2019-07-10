@@ -10,13 +10,26 @@
 
   <body> 
 
+    <!--ENCABEZADO: BOTONES PRINCIPALES-->
+
+    <header class= "header">
 <div id="gradient"></div>
 <div id="card">
   <h2>TODOS LOS PERSONAJES</h2>
   <p>Sitio donde puedes ver información de los personajes</p>
+  <!--BOTONES-->
+<div class="desplegable">
+    <select id="btn-multiOption">
+      <option value="0" selected> Ordenar por ... </option>
+      <option value="1"> a - z </option>
+      <option value="1"> z - a </option>
+    </select>
+  </div>
 </div>
 
-<br>
+
+</header>
+
 <!--SECCION VER DATA-->
 <section class= "section-data">
   <div class="view-colecction" id="view-colecction"></div>
