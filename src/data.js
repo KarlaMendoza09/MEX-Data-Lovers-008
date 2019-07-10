@@ -8,26 +8,3 @@
 window.example = example; */
 
 
-const sortBy = (selectedSort, data) => {
-  if(selectedSort == 1) {
-    return data.sort(function(a, b) {
-      if(a.name > b.name) {
-        return 1;
-      } if (a.name < b.name) {
-        return -1;
-      }
-      return 0;
-    })
-  } else if (selectedSort == 2) {
-    return data.sort(function (a, b) {
-      if(a.name < b.name) {
-        return 1;
-      } if (a.name > b.name) {
-        return -1;
-      }
-      return 0;
-    });
-  }
-};
-
-window.sortBy =sortBy;
