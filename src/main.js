@@ -21,7 +21,10 @@ return `<div class= "individualcard">
 let stringAllCards = ''; // creando variable que guardara toda la data (string)
 const allCards = data.forEach((element) => { 
   stringAllCards += colecctionCards(element);/*console.log(stringAllCards);*/ });
-  viewAllColecction.innerHTML= stringAllCards;
+
+  const btnCharacters= document.getElementById('btn-characters').addEventListener('click',() => {
+  viewAllColecction.innerHTML= stringAllCards;});
+
 
 
 //BOTON MOSTRAR DIMENSION EARTH C137
@@ -31,10 +34,9 @@ const cardDimensionC137 = data.filter((dimension) => {
 if (dimension.origin.name === 'Earth (C-137)') {
 stringCardsDimensionC137 += colecctionCards(dimension);
 }
-});
+}); btnEarth.addEventListener('click',() => {viewAllColecction.innerHTML = stringCardsDimensionC137; });
 
-btnEarth.addEventListener('click',() => { 
-  viewAllColecction.innerHTML = stringCardsDimensionC137; });
+
 
 
 //BOTON MOSTRAR LOS RICK
@@ -57,6 +59,33 @@ stringCardsAllMortys += colecctionCards(allMortys);
 }
 });
 btnMortys.addEventListener('click',() => { viewAllColecction.innerHTML = stringCardsAllMortys; });
+
+
+
+//BOTON MOSTRAR LAS SUMMERS
+const btnSummers= document.getElementById('btn-summers'); 
+let stringCardsAllSummers = '';
+const cardSummers = data.filter((allSummers) => { 
+if (allSummers.name == 'Summer Smith') {
+stringCardsAllSummers += colecctionCards(allSummers);
+}
+});
+btnSummers.addEventListener('click',() => { viewAllColecction.innerHTML = stringCardsAllSummers; });
+
+
+//BOTON MOSTRAR LAS BETHS
+const btnBeths= document.getElementById('btn-beths'); 
+let stringCardsAllBeths = '';
+const cardBeths = data.filter((allBeths) => { 
+if (allBeths.name == 'Beth Smith') {
+stringCardsAllBeths += colecctionCards(allBeths);
+}
+});
+btnBeths.addEventListener('click',() => { viewAllColecction.innerHTML = stringCardsAllBeths; });
+
+
+
+
 
 
 /* ------------------ PROCESS --------------------------
