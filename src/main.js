@@ -28,14 +28,14 @@ const allCards = data.forEach((element) => {
 
 
 //BOTON MOSTRAR DIMENSION EARTH C137
-/*const btnEarth= document.getElementById('btn-earth'); 
+const btnEarth= document.getElementById('btn-earth'); 
 let stringCardsDimensionC137 = '';
 const cardDimensionC137 = data.filter((dimension) => { 
 if (dimension.origin.name === 'Earth (C-137)') {
 stringCardsDimensionC137 += colecctionCards(dimension);
 }
 }); btnEarth.addEventListener('click',() => {viewAllColecction.innerHTML = stringCardsDimensionC137; });
-*/
+
 
 
 
