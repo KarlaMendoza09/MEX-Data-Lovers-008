@@ -25,7 +25,12 @@ body {
 	color: #ffffff;
 	background: #222; 
 	font-size: 1em;
-	line-height: 1em;
+  line-height: 1em;
+  background: url(./images-rm/fondoplaneta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 } 
 
 .left { left:25px;}
@@ -129,17 +134,18 @@ body {
     
 /* PRESENTACION DE LA DATA */
 #view-colecction {
-    background-color: #440e70;
+    background-color: #0e4981B3;
     flex-direction: row;
     flex-wrap: wrap;   /*Los elementos flex son colocados en varias líneas*/
     display: flex;
     justify-content: space-around;
-    margin: 2rem;
+    margin: 5rem;
     border-radius: 1.5rem;
-    width: 1200px;
+    width: 800px;
     height: 550px;
     overflow: scroll;
     padding: 1rem auto;
+    
 }
 
 .individualcard {
