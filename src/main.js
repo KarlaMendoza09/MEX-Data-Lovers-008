@@ -3,8 +3,12 @@ const data = window.RICKANDMORTY.results;  //llamando el contenido de la DATA "r
 const viewAllColection = document.getElementById('view-colecction');  //llamando el div donde vamos a imprimir la data   
 
 //CREAR FUNCION QUE DEFINE LA VISUALIZACION DE LA DATA, y llamarla con las proximas funciones
-const colectionCards = (card) => {
-return `<div class= "individualcard">
+
+
+const printCards = (data) => {
+  let stringAllCards = ''; // creando variable que guardara toda la data (string)
+   data.forEach(card => { 
+stringAllCards += `<div class= "individualcard">
           <div class="portrait">
           <img src = "${card.image}"> 
             <div class="info">   
@@ -15,15 +19,15 @@ return `<div class= "individualcard">
             </div>
           </div>
          </div>`
-        };
-        
-// FUNCION PARA IMPRIMIR DATA
-let stringAllCards = ''; // creando variable que guardara toda la data (string)
-const allCards = data.forEach((element) => { 
-  stringAllCards += colectionCards(element);/*console.log(stringAllCards);*/
-});
-  const btnCharacters= document.getElementById('btn-characters').addEventListener('click',() => {
-  viewAllColection.innerHTML= stringAllCards;});
+        });
+      viewAllColection.innerHTML = stringAllCards;
+    };
+    printCards(data);      
+
+
+
+//BOTON IMPRIMIR DATA--const btnCharacters= document.getElementById('btn-characters').addEventListener('click', printCards(data));
+
 
 //LLAMANDO A TODOS LOS BOTONES
 const allBtns = document.getElementsByClassName('all-btns');
@@ -34,23 +38,28 @@ for(let i = 0; i < allBtns.length; i++) {
 
     if(idTarget == 'btn-earth') {
     const cardDimensionC137 = data.filter(dimension => dimension.location.name =='Earth (C-137)');
-    console.log(cardDimensionC137);
+    printCards(cardDimensionC137);
+    //console.log(cardDimensionC137);
 
   } if (idTarget == 'btn-ricks') {
-    const cardRicks = data.filter(allRicks => allRicks.name == 'Rick Sanchez');
-    console.log(cardRicks);
+    const cardRicks = data.filter(allRicks => allRicks.location.name == 'Citadel of Ricks');
+    //console.log(cardRicks);
+    printCards(cardRicks);
 
   } if (idTarget == 'btn-mortys') {
     const cardMortys = data.filter(allMortys => allMortys.name == 'Morty Smith');
-    console.log(cardMortys);
+    //console.log(cardMortys);
+    printCards(cardMortys);
 
-  } if (idTarget === 'btn-summers') {
+  } if (idTarget == 'btn-summers') {
     const cardSummers = data.filter(allSummers => allSummers.name == 'Summer Smith');
-    console.log(cardSummers);
+    //console.log(cardSummers);
+    printCards(cardSummers);
 
-  } if (idTarget === 'btn-beths') {
+  } if (idTarget == 'btn-beths') {
     const cardBeths = data.filter(allBeths => allBeths.name == 'Beth Smith');
-    console.log(cardBeths);
+    //console.log(cardBeths);
+    printCards(cardBeths);
   } 
   return 0;
   })
@@ -113,8 +122,8 @@ const result = document.getElementById('view-colecction');
 
 
 */
-  //---------------------BOTONES FUNCION INDIVIDUALES --------------------
-/*
+  /*---------------------BOTONES FUNCION INDIVIDUALES --------------------
+
 //BOTON MOSTRAR DIMENSION EARTH C137
 const btnEarth= document.getElementById('btn-earth'); 
 let stringCardsDimensionC137 = '';
