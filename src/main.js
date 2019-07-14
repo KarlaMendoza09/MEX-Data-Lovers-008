@@ -1,9 +1,9 @@
 
 const data = window.RICKANDMORTY.results;  //llamando el contenido de la DATA "rickandmorty.js"  
-const viewAllColecction = document.getElementById('view-colecction');  //llamando el div donde vamos a imprimir la data   
+const viewAllColection = document.getElementById('view-colecction');  //llamando el div donde vamos a imprimir la data   
 
 //CREAR FUNCION QUE DEFINE LA VISUALIZACION DE LA DATA, y llamarla con las proximas funciones
-const colecctionCards = (card) => {
+const colectionCards = (card) => {
 return `<div class= "individualcard">
           <div class="portrait">
           <img src = "${card.image}"> 
@@ -20,28 +20,99 @@ return `<div class= "individualcard">
 // FUNCION PARA IMPRIMIR DATA
 let stringAllCards = ''; // creando variable que guardara toda la data (string)
 const allCards = data.forEach((element) => { 
-  stringAllCards += colecctionCards(element);/*console.log(stringAllCards);*/
+  stringAllCards += colectionCards(element);/*console.log(stringAllCards);*/
 });
-
   const btnCharacters= document.getElementById('btn-characters').addEventListener('click',() => {
-  viewAllColecction.innerHTML= stringAllCards;});
+  viewAllColection.innerHTML= stringAllCards;});
+
+//LLAMANDO A TODOS LOS BOTONES
+const allBtns = document.getElementsByClassName('all-btns');
+//console.log(allBtns);
+for(let i = 0; i < allBtns.length; i++) {
+  allBtns[i].addEventListener('click', () => {
+    idTarget= event.target.id;
+
+    if(idTarget == 'btn-earth') {
+    const cardDimensionC137 = data.filter(dimension => dimension.location.name =='Earth (C-137)');
+    console.log(cardDimensionC137);
+
+  } if (idTarget == 'btn-ricks') {
+    const cardRicks = data.filter(allRicks => allRicks.name == 'Rick Sanchez');
+    console.log(cardRicks);
+
+  } if (idTarget == 'btn-mortys') {
+    const cardMortys = data.filter(allMortys => allMortys.name == 'Morty Smith');
+    console.log(cardMortys);
+
+  } if (idTarget === 'btn-summers') {
+    const cardSummers = data.filter(allSummers => allSummers.name == 'Summer Smith');
+    console.log(cardSummers);
+
+  } if (idTarget === 'btn-beths') {
+    const cardBeths = data.filter(allBeths => allBeths.name == 'Beth Smith');
+    console.log(cardBeths);
+  } 
+  return 0;
+  })
+};
+
+/*llamando a select
+const btnMulti= document.getElementById('btn-multi');
+btnMulti.addEventListener('change', () => {
+  const valueUser= btnMulti.value;
+  //let orderData= data.sort((a, b) => a-b);
+});
+*/
+
+
+
+
+
+/* 
+const orderData = data.sort(function(a, b) {
+  cardsOrder='';
+  if (a.name > b.name) {
+    return  AllCards(cardsOrder);
+  } if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+}); console.log(orderData);
+
+
+
+
+const orderData = data.sort(function(a, b) {
+  if (a.name > b.name) {
+    return viewAllColection.innerHTML = stringAllCards;
+  } if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+}); 
+
 
 
 //se llama el boton "select" y guardarlo en una variable
 const selectOrder = document.getElementById('btn-multi');
-
-//hacemos la funcion.
-//llamamos al boton "selectOrder" y le decimos que al momento del click, tendrá un evento
-// "change" se activa dependiendo la interaccion del usuario
+//const optionOrder= document.getElementById ('btn-multi').value;
 selectOrder.addEventListener('change', (event) => {
 const result = document.getElementById('view-colecction');
-  result.textContent += colecctionCards;
+  result.textContent += colectionCards; 
+});
+
+//se llama el boton "select" y guardarlo en una variable
+const selectOrder = document.getElementById('btn-multi');
+//const optionOrder= document.getElementById ('btn-multi').value;
+
+
+selectOrder.addEventListener('change', (event) => {
+const result = document.getElementById('view-colecction');
+  result.textContent = `Seleccionaste ${event.target.value}`
 });
 
 
-
-
-
+*/
   //---------------------BOTONES FUNCION INDIVIDUALES --------------------
 /*
 //BOTON MOSTRAR DIMENSION EARTH C137
