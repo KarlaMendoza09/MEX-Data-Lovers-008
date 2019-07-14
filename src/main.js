@@ -19,9 +19,9 @@ stringAllCards += `<div class= "individualcard">
           </div>
          </div>`
         });
-      viewAllColection.innerHTML = stringAllCards;
-    };
-    printCards(data);      
+          viewAllColection.innerHTML = stringAllCards;
+        }
+        printCards(data);      
 
 
 //LLAMANDO A TODOS LOS BOTONES
@@ -30,7 +30,9 @@ const allBtns = document.getElementsByClassName('all-btns');
 for(let i = 0; i < allBtns.length; i++) {
   allBtns[i].addEventListener('click', () => {
     idTarget= event.target.id;
-    if(idTarget == 'btn-earth') {
+    if(idTarget == 'btn-characters'){
+      printCards(data);
+    } if(idTarget == 'btn-earth') {
     const cardDimensionC137 = data.filter(dimension => dimension.location.name =='Earth (C-137)');
     printCards(cardDimensionC137);
     //console.log(cardDimensionC137);
@@ -74,5 +76,4 @@ btnMulti.addEventListener('change', () => {
   //console.log(orderCards);
   printCards(orderCards);
   }
-  
-})
+});
