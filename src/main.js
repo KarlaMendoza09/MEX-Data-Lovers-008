@@ -66,11 +66,13 @@ btnMulti.addEventListener('change', () => {
   const valueUser= btnMulti.value;
   if (valueUser == 'az'){
     let orderCards= data.sort((a,b) => a.name > b.name);
-  console.log(orderCards);
+  //console.log(orderCards);
+  printCards(orderCards);
   }
   if (valueUser == 'za') {
     let orderCards= data.sort((a,b) => a.name < b.name );
-  console.log(orderCards);
+  //console.log(orderCards);
+  printCards(orderCards);
   }
   
 })
