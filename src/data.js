@@ -16,37 +16,37 @@ window.dimensionC137 = dimensionC137;
 const citadel = (data) => {
   let result= data.filter(allCitadel => allCitadel.location.name == 'Citadel of Ricks');
   return result;
-}
+};
 window.citadel = citadel;
 
 const replacement= (data) => {
   let result= data.filter(allReplacement => allReplacement.location.name == 'Earth (Replacement Dimension)');
   return result;
-}
+};
 window.replacement = replacement;
 
 const cableTv = (data) => {
   let result = data.filter(allCableTv => allCableTv.location.name == 'Interdimensional Cable TV');
   return result;
-}
+};
 window.cableTv = cableTv;
 
 const anatomyPark = (data) => {
   let result = data.filter(allAnatomy => allAnatomy.location.name == 'Anatomy Park');
   return result;
-}
+};
 window.anatomyPark = anatomyPark;
 
 const ricks= (data) => {
   let items = data.filter(item => item.name.indexOf('Rick') > -1);
   return items;
-}
+};
 window.ricks = ricks;
 
 const mortys= (data) => {
   let items = data.filter(item => item.name.indexOf('Morty') > -1);
   return items;
-}
+};
 window.mortys= mortys;
 
 /*const orderData= (selectedSort, data) => {

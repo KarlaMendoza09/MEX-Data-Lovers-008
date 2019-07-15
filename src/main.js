@@ -20,14 +20,14 @@ const printCards = (data) => {
          </div>`
   });
   viewAllColection.innerHTML = stringAllCards;
-}
+};
 printCards(data);
 
 //BOTONES
 const allButtons = document.getElementsByClassName('all-btns'); //console.log(allBtns);
 for (let i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click', () => {
-    idTarget = event.target.id;
+    let idTarget = event.target.id;
     if (idTarget == 'btn-characters') {
       printCards(data);
     }
@@ -60,8 +60,8 @@ for (let i = 0; i < allButtons.length; i++) {
       printCards(cardsAnatomyPark);
     }
     return 0;
-  })
-};
+  });
+}
 
 
 
