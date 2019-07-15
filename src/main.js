@@ -18,7 +18,7 @@ const printCards = (data) => {
             </div>
           </div>
          </div>`
-  });
+  })
   viewAllColection.innerHTML = stringAllCards;
 };
 printCards(data);
