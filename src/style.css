@@ -61,9 +61,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
 .individualcard {
 align-items: center;
 justify-content: space-between;
@@ -92,12 +89,53 @@ display: inline-flex;
 }
 
 .info {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   text-align: center;
-  letter-spacing: 0.2rem;
-  line-height: 100%;
+  letter-spacing: 0.4rem;
+  line-height: 110%;
   /*display: inline;*/
 }
+
+#colecction-buttons {
+  border-radius: 50px 50%;
+  -webkit-border-radius: 50px 50% 50px 0% ;
+  -moz-border-radius: 50px 50% 50px 0%;
+  padding: 6px 16px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+  color: white;
+  background: linear-gradient(top bottom, #ecb51c 0%,#754703 100%);
+  background: -moz-linear-gradient(top bottom, #ecb51c 0%, #754703 100%); 
+  background: linear-gradient(to bottom, #ecb51c 0%,#754703 100%);
+  font-size: 1.1rem;
+  font-weight: bold; /* Letra en negrita */
+}
+
+#colecction-buttons button {
+  cursor: pointer; /* Para que el cursor del ratón cambie */
+  border-radius: 50px 50% 0px 0%;
+  -webkit-border-radius: 50px 50% 0px 0% ;
+  -moz-border-radius: 50px 50% 0px 0%;
+  padding: 6px 16px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
+  color: white;
+  background: linear-gradient(top bottom, #ecb51c 0%,#c40c05 100%);
+  background: -moz-linear-gradient(top bottom, #ecb51c 0%,#c40c05 100%); 
+  background: linear-gradient(to bottom, #db3e29 0%,#c40c05 100%);
+  font-size: 1.1rem;
+  font-weight: bold; /* Letra en negrita */
+}
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width:768px) {
   header {
