@@ -15,6 +15,7 @@ const printCards = (data) => {
             <p>Especie: ${card.species}</p>
             <p>Género: ${card.gender}</p>
             <p>Tipo: ${card.type}</p>
+            <p>Origen: ${card.origin.name}</p>
             </div>
           </div>
          </div> `

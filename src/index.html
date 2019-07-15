@@ -12,15 +12,32 @@
 <script src="./data/rickandmorty/rickandmorty.js"></script>
 
 <body>
-
-    <header class= "header">
+  <header class="cabecera-barra"> 
+    <div class="cabecera-barra-1">
+        <div class="cabecera-separador">
+ 
+            <h1><a href="#">Rick&Morty<span> webFan</span></a></h1>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#" >Programas</a>
+                <a href="#">FORO INFORMATIVO</a>
+                <a href="#">¿?</a>
+            </nav>
+        </div>
+    </div>
+  </header>
+    <!--<header class= "header">
           <h1>RICK Y MORTY <br> Web F@n </h1>
           <br><p>Elige lo que mas te interese:</p>
     </header>
+    -->
+    <main class="init">
+      Aqui va el inicio
+    </main>
   
-  <main class="contenido">
+  <section class="contenido">
     <!--BOTONES-->
-    <aside class="sidebar" id="colecction-buttons">
+    <div class="sidebar" id="colecction-buttons">
         <button id="btn-characters" class="all-btns"> TODOS LOS PERSONAJES </button>
         <button id="btn-ricks" class="all-btns"> LOS  R I C K S </button>
         <button id="btn-mortys" class="all-btns"> LOS  M O R T Y S </button>
@@ -36,14 +53,15 @@
              <option value="az"> a - z </option>
              <option value="za"> z - a </option>
            </select>
-         </aside>
-
-<br><br>
-</main>
-    
-<!--SECCION VER DATA-->
-  <div class="view-colecction" id="view-colecction"></div>
+          </div>
+<br>
   </section>
+    <section class="view-data">
+     <!--SECCION VER DATA-->
+  <div class="view-colecction" id="view-colecction"></div>
+ 
+    </section>
+
 
   <footer class="footer">
 			<h3>FOOTER</h3>
