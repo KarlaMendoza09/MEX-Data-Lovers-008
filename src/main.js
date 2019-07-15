@@ -10,14 +10,14 @@ const printCards = (data) => {
           <div class="portrait">
           <img src = "${card.image}"> 
             <div class="info">   
-            <h3> ${card.name} </h3>
-            <p> Status: ${card.status} </p>
-            <p> Especie: ${card.species} </p>
-            <p> Género: ${card.gender} </p>
-            <p> Tipo: ${card.type} </p>
+            <h3>${card.name} </h3>
+            <p>Status: ${card.status}</p>
+            <p>Especie: ${card.species}</p>
+            <p>Género: ${card.gender}</p>
+            <p>Tipo: ${card.type}</p>
             </div>
           </div>
-         </div>`
+         </div> `
   })
   viewAllColection.innerHTML = stringAllCards;
 };
