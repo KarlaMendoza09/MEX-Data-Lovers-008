@@ -49,14 +49,14 @@ const mortys= (data) => {
 }
 window.mortys= mortys;
 
-const orderBy= (selectSort, data) => {
-  if (selectSort == 'az'){
+/*const orderData= (selectedSort, data) => {
+  if (selectedSort == 'az'){
     return data.sort(function(a, b) {
       if (a.name > b.name) {
         return 1;
       } if (a.name < b.name) {
         return -1;
-      } else if(selectSort == 'za') {
+      } else if(selectedSort == 'za') {
         return data.sort(function(a, b) {
           if (a.name < b.name) {
             return 1;
@@ -69,4 +69,4 @@ const orderBy= (selectSort, data) => {
     })
   }
 };
-window.orderBy= orderBy;
+window.orderData= orderData; */

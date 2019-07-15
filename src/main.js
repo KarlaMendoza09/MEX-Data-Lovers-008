@@ -62,26 +62,13 @@ for (let i = 0; i < allButtons.length; i++) {
     return 0;
   })
 };
-//ORDENAR DE A-Z Y Z-A
-document.getElementById('dropDownSelecter').addEventListener('click', () => {
-  const indexSort= document.getElementById('dropDownSelecter');
-  const selectSort= indexSort[indexSort.selectIndex].value;
-  const arraySort= window.data.orderBy(selectSort, data);
-  printCards(arraySort);
-});
 
 
 
+const selectOrder= document.getElementById('select-order');
 
-
-
-
-
-/*
-const btnSelect= document.getElementById('btn-select');
-
-btnSelect.addEventListener('change', () => {
-  const valueUser= btnSelect.value;
+selectOrder.addEventListener('change', () => {
+  const valueUser= selectOrder.value;
   if (valueUser == 'az'){
     let orderCards= data.sort((a,b) => a.name > b.name);
   //console.log(orderCards);
@@ -93,6 +80,18 @@ btnSelect.addEventListener('change', () => {
   printCards(orderCards);
   }
 });
+
+
+
+/*//ORDENAR DE A-Z Y Z-A
+document.getElementById('dropDownSelecter').addEventListener('change', () => {
+  const indexSort= document.getElementById('dropDownSelecter');
+  const selectedSort= indexSort[indexSort.selectedIndex].value;
+  const arraySort= window.orderData(selectedSort, data);
+  printCards(arraySort);
+});
 let orderCards= data.sort((a,b) => a.name > b.name );
 console.log(orderCards);
+
+
 */
