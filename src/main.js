@@ -1,12 +1,12 @@
 
-const data = window.RICKANDMORTY.results;  //llamando el contenido de la DATA "rickandmorty.js"  
-const viewAllColection = document.getElementById('view-colecction');  //llamando el div donde vamos a imprimir la data   
+const data = window.RICKANDMORTY.results; 
+const viewAllColection = document.getElementById('view-colecction');  //llamando el div para ver data   
 
-//CREAR FUNCION QUE DEFINE LA VISUALIZACION DE LA DATA, y llamarla con las proximas funciones
+//View all data
 const printCards = (data) => {
-  let stringAllCards = ''; // creando variable que guardara toda la data (string)
-   data.forEach(card => { 
-stringAllCards += `<div class= "individualcard">
+  let stringAllCards = ''; // (nuevo string)
+  data.forEach(card => {
+    stringAllCards += `<div class= "individualcard">
           <div class="portrait">
           <img src = "${card.image}"> 
             <div class="info">   
@@ -18,54 +18,70 @@ stringAllCards += `<div class= "individualcard">
             </div>
           </div>
          </div>`
-        });
-          viewAllColection.innerHTML = stringAllCards;
-        }
-        printCards(data);      
+  });
+  viewAllColection.innerHTML = stringAllCards;
+}
+printCards(data);
 
-
-//LLAMANDO A TODOS LOS BOTONES
-const allBtns = document.getElementsByClassName('all-btns');
-//console.log(allBtns);
-for(let i = 0; i < allBtns.length; i++) {
-  allBtns[i].addEventListener('click', () => {
-    idTarget= event.target.id;
-    if(idTarget == 'btn-characters'){
+//BOTONES
+const allButtons = document.getElementsByClassName('all-btns'); //console.log(allBtns);
+for (let i = 0; i < allButtons.length; i++) {
+  allButtons[i].addEventListener('click', () => {
+    idTarget = event.target.id;
+    if (idTarget == 'btn-characters') {
       printCards(data);
-    } if(idTarget == 'btn-earth') {
-    const cardDimensionC137 = data.filter(dimension => dimension.location.name =='Earth (C-137)');
-    printCards(cardDimensionC137);
-    //console.log(cardDimensionC137);
-  } if (idTarget == 'btn-ricks') {
-    const cardRicks = data.filter(allRicks => allRicks.location.name == 'Citadel of Ricks');
-    //console.log(cardRicks);
-    printCards(cardRicks);
-  } if (idTarget == 'btn-replace') {
-    const cardReplace = data.filter(allReplaces => allReplaces.location.name == 'Earth (Replacement Dimension)');
-    //console.log(cardReplace);
-    printCards(cardReplace);
-  } if (idTarget == 'btn-cable') {
-    const cardCable = data.filter(allCable => allCable.location.name == 'Interdimensional Cable');
-    //console.log(cardSummers);
-    printCards(cardCable);
-  } if (idTarget == 'btn-park') {
-    const cardPark = data.filter(allPark => allPark.location.name == 'Anatomy Park');
-    //console.log(cardPark);
-    printCards(cardPark);
-  } 
-  return 0;
+    }
+    if (idTarget == 'btn-ricks') {
+      const CardsAllRicks= window.ricks(data);
+      printCards(CardsAllRicks);
+    }
+    if (idTarget == 'btn-mortys') {
+      const CardsAllMortys= window.mortys(data);
+      printCards(CardsAllMortys);
+    }
+    if (idTarget == 'btn-earth') {
+      const cardDimensionC137 = window.dimensionC137(data);
+      printCards(cardDimensionC137);//console.log(cardDimensionC137);
+    }
+    if (idTarget == 'btn-citadel') {
+      const cardsCitadel = window.citadel(data); //console.log(cardRicks);
+      printCards(cardsCitadel);
+    }
+    if (idTarget == 'btn-replacement') {
+      const cardsReplacement = window.replacement(data); //console.log(cardReplace);
+      printCards(cardsReplacement);
+    }
+    if (idTarget == 'btn-cabletv') {
+      const cardsCabletv = window.cableTv(data); //console.log(cardSummers);
+      printCards(cardsCabletv);
+    }
+    if (idTarget == 'btn-park') {
+      const cardsAnatomyPark = window.anatomyPark(data); //console.log(cardPark);
+      printCards(cardsAnatomyPark);
+    }
+    return 0;
   })
 };
-
 //ORDENAR DE A-Z Y Z-A
-/*let orderCards= data.sort((a,b) => a.name > b.name );
-console.log(orderCards);
-*/
+document.getElementById('dropDownSelecter').addEventListener('click', () => {
+  const indexSort= document.getElementById('dropDownSelecter');
+  const selectSort= indexSort[indexSort.selectIndex].value;
+  const arraySort= window.data.orderBy(selectSort, data);
+  printCards(arraySort);
+});
 
-const btnMulti= document.getElementById('btn-multi');
 
-btnMulti.addEventListener('change', () => {
-  const valueUser= btnMulti.value;
+
+
+
+
+
+
+/*
+const btnSelect= document.getElementById('btn-select');
+
+btnSelect.addEventListener('change', () => {
+  const valueUser= btnSelect.value;
   if (valueUser == 'az'){
     let orderCards= data.sort((a,b) => a.name > b.name);
   //console.log(orderCards);
@@ -77,3 +93,6 @@ btnMulti.addEventListener('change', () => {
   printCards(orderCards);
   }
 });
+let orderCards= data.sort((a,b) => a.name > b.name );
+console.log(orderCards);
+*/

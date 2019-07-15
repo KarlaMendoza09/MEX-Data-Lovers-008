@@ -107,7 +107,7 @@ body {
       font-weight: bold; /* Letra en negrita */
     }
     
-    #btn-multi { /*boton select a-z /z-a*/
+    #btn-select { /*boton select a-z /z-a*/
       cursor: pointer; /* Para que el cursor del ratón cambie */
       border-radius: 15px 60% 0px 0%;
       -webkit-border-radius: 15px 60% 0px 0%;
