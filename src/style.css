@@ -34,6 +34,7 @@ body {
 
 /* PRESENTACION DE LA DATA */
 #view-colecction {
+  background: #9b3c06CC;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -127,7 +128,7 @@ display: inline-flex;
   font-weight: bold; /* Letra en negrita */
 }
 
-select-order { /*boton select a-z /z-a*/
+#select-order { /*boton select a-z /z-a*/
   cursor: pointer; /* Para que el cursor del ratón cambie */
   border-radius: 15px 60% 0px 0%;
   -webkit-border-radius: 15px 60% 0px 0%;
