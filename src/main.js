@@ -1,5 +1,7 @@
+import { RICKANDMORTY } from "./data/rickandmorty/rickandmorty";
 
-const data = window.RICKANDMORTY.results; 
+//const data = window.RICKANDMORTY.results; 
+const data = RICKANDMORTY.results;
 const viewAllColection = document.getElementById('view-colecction');  //llamando el div para ver data   
 
 //View all data
