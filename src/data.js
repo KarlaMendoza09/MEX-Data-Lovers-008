@@ -6,7 +6,22 @@
 };
 
 window.example = example; */
-const dimensionC137 = (data) => { 
+
+window.filterData = (data,filterBy) => {
+  let result = data.filter((element)=> {
+    console.log(element);
+    const personaje= element.name.toLowerCase();
+    const localizacion= element.location.name.toLowerCase();
+    return personaje.indexOf(filterBy.toLowerCase()) > -1 || localizacion.indexOf(filterBy.toLowerCase()) > -1;
+  })
+return result;
+};
+window.filterData = filterData;
+
+
+
+
+/*const dimensionC137 = (data) => { 
   let result= data.filter(dimension => dimension.location.name =='Earth (C-137)');
   return result;
 };
@@ -47,7 +62,7 @@ const mortys= (data) => {
   let items = data.filter(item => item.name.indexOf('Morty') > -1);
   return items;
 };
-window.mortys= mortys;
+window.mortys= mortys;*/
 
 /*const orderData= (selectedSort, data) => {
   if (selectedSort == 'az'){

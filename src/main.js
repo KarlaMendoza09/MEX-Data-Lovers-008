@@ -25,7 +25,15 @@ const printCards = (data) => {
 printCards(data);
 
 //BOTONES
-const allButtons = document.getElementsByClassName('all-btns'); //console.log(allBtns);
+const btnUsers= document.getElementById('colecction-buttons');
+btnUsers.addEventListener('click', (e) => {
+  console.log(e.target.name);
+    
+    const filterAllCards= filterData(data, e.target.name);
+    printCards(filterAllCards);
+  });
+
+/*const allButtons = document.getElementsByClassName('all-btns'); //console.log(allBtns);
 for (let i = 0; i < allButtons.length; i++) {
   allButtons[i].addEventListener('click', () => {
     let idTarget = event.target.id;
@@ -62,7 +70,7 @@ for (let i = 0; i < allButtons.length; i++) {
     }
     return 0;
   });
-}
+}*/
 
 
 
