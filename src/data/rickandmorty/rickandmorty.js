@@ -1,4 +1,4 @@
-window.RICKANDMORTY = {
+export const RICKANDMORTY = {
   "info": {
     "count": 493,
     "pages": 25,
