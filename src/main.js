@@ -27,7 +27,7 @@ printCards(data);
 //BOTONES
 const btnUsers= document.getElementById('colecction-buttons');
 btnUsers.addEventListener('click', (e) => {
-  console.log(e.target.name);
+  console.log(e.target.id);
     
     const filterAllCards= filterData(data, e.target.name);
     printCards(filterAllCards);

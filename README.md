@@ -1,3 +1,6 @@
+LINK Presentacion
+https://docs.google.com/presentation/d/1UPjl39-Rh2CLptpGKMno1CDgwOoG5mRW55h-g8C_XTs/edit?usp=sharing
+
 # Data Lovers
 DATA LOVERS / "Ricky y Morty", web fan
 
