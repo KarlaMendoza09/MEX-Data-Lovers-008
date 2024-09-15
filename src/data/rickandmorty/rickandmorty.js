@@ -1,4 +1,4 @@
-const RICKANDMORTY = {
+window.RICKANDMORTY = {
   "info": {
     "count": 493,
     "pages": 25,
@@ -6,7 +6,7 @@ const RICKANDMORTY = {
     "prev": ""
   },
   "results": [{
-    "id": 1,
+    "id": 1,  //0
     "name": "Rick Sanchez",
     "status": "Alive",
     "species": "Human",
@@ -25,7 +25,7 @@ const RICKANDMORTY = {
     "url": "https://rickandmortyapi.com/api/character/1",
     "created": "2017-11-04T18:48:46.250Z"
   }, {
-    "id": 2,
+    "id": 2, //1
     "name": "Morty Smith",
     "status": "Alive",
     "species": "Human",
@@ -44,7 +44,7 @@ const RICKANDMORTY = {
     "url": "https://rickandmortyapi.com/api/character/2",
     "created": "2017-11-04T18:50:21.651Z"
   }, {
-    "id": 3,
+    "id": 3, // 2
     "name": "Summer Smith",
     "status": "Alive",
     "species": "Human",
@@ -63,7 +63,7 @@ const RICKANDMORTY = {
     "url": "https://rickandmortyapi.com/api/character/3",
     "created": "2017-11-04T19:09:56.428Z"
   }, {
-    "id": 4,
+    "id": 4, //3
     "name": "Beth Smith",
     "status": "Alive",
     "species": "Human",
@@ -742,7 +742,7 @@ const RICKANDMORTY = {
       "name": "Earth (Evil Rick's Target Dimension)",
       "url": "https://rickandmortyapi.com/api/location/34"
     },
-    "image": "https://rickandmortyapi.com/api/character/avatar/39.jpeg",
+    "image": "https://rickandmortyapi.com/api/character bvh/avatar/39.jpeg",
     "episode": ["https://rickandmortyapi.com/api/episode/10"],
     "url": "https://rickandmortyapi.com/api/character/39",
     "created": "2017-11-05T09:52:31.777Z"
